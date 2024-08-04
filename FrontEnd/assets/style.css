@@ -1,0 +1,603 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+nav ul li a {
+    text-decoration: inherit;
+    color: black;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+
+.login-form {
+	width: 379px;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+	margin: auto;
+	margin-top: 10%;
+	margin-bottom: 20%;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #2f4f4f; /* Couleur du texte */
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2f4f4f;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.input-group button {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+    width: 50%;
+    padding: 10px;
+    background-color: #1d5039; /* Couleur du bouton */
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background-color: #2d584d; /* Couleur au survol du bouton */
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #2f4f4f;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.header-container {
+    display: flex; /* Utilise flexbox pour aligner horizontalement */
+    align-items: center; /* Aligne verticalement le h2 et le bouton */
+    justify-content: center; /* Espace entre les éléments */
+    margin-bottom: 20px; /* Ajuste l'espacement en bas */
+}
+
+#openModal {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+    margin-top: -20px;
+}
+
+#openModal img {
+    width: 15.5px;
+
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 40px;
+    border: 1px solid #757373;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    position: relative; /* Correction de l'erreur 'position: space-around' */
+}
+
+.modal-content hr {
+    border: none; /* Supprime la bordure par défaut */
+    border-top: 1px solid #ccc; /* Ajoute une ligne horizontale */
+    margin: 20px 0; /* Espace au-dessus et en dessous de la ligne */
+    margin: auto;
+    width: 630px;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px; 
+    margin-bottom: 30px;
+}
+
+.modal .gallery figure {
+    position: relative;
+    margin: 0;
+}
+
+.modal .gallery img {
+    width: 100%; /* Ajuste la largeur de l'image pour qu'elle s'adapte au conteneur */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.gallery figcaption {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.modal .gallery button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .gallery button img {
+    width: 16px;
+    height: 16px;
+    margin-top: 18px;
+}
+
+.add-photo-btn {
+    background-color: #007b5e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 237px;
+}
+
+.add-photo-btn:hover {
+    background-color: #005f47;
+}
+
+#addPhotoForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#addPhotoForm input,
+#addPhotoForm button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+/* Styles pour le conteneur des catégories */
+#categories {
+    display: flex;
+    justify-content: center;  /* Centre les éléments horizontalement */
+    align-items: center;  /* Centre les éléments verticalement */
+    flex-wrap: wrap;  /* Permet le retour à la ligne des éléments */
+    gap: 10px;  /* Espacement entre les éléments */
+    margin-bottom: 30px;
+}
+
+/* Styles pour les boutons de catégorie */
+#categories .category-button {
+    background-color: transparent;
+    border: 1px solid #005f47; 
+    padding: 10px 20px;
+    color: #005f47;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 5px; /* Ajoute un espace autour de chaque bouton */
+}
+
+#categories .category-button:hover {
+    background-color: #005f47;
+    color: white;
+}
+
+#categories .category-button.active {
+    background-color: #333;
+    color: #005f47;
+}
+
+
+/* Styles pour le contenu de la modale d'ajout de photo */
+/* Styles pour le contenu de la modale d'ajout de photo */
+.add-photo-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px; /* Assure que la modale a la même taille que la galerie photo */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+}
+
+.add-photo-close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-photo-close:hover,
+.add-photo-close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Styles pour le formulaire d'ajout de photo */
+.add-photo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Assure que le formulaire prend toute la largeur */
+    max-width: 430px; /* Limite la largeur maximale du formulaire */
+    justify-content: center;
+}
+
+.photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%; /* Prend toute la largeur disponible */
+    margin-left: -30px;
+}
+
+.upload-label {
+    cursor: pointer;
+    display: block;
+
+}
+
+
+.upload-info {
+    margin-top: 10px;
+    color: #777;
+}
+
+/* Cache l'input de type file */
+.upload-label input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.input-group {
+    width: 430px; /* Prend toute la largeur disponible */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%; /* Prend toute la largeur disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.submit-button {
+    background-color: #bfbfbf; /* Exemple de couleur */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Prend toute la largeur disponible */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.submit-button:hover {
+    background-color: #b1b1b1;
+}
+
+.upload-button {
+    background-color: #d7eeff;
+    padding: 20px;
+    text-align: center;
+    width: 420px;
+    height: 170px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+
+
+.upload-info .upload-info-text {
+    margin-top: 10px;
+    width: 173px;
+    color: #585b6b;
+    background-color: rgb(209, 209, 209);
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.upload-info-details {
+    margin: 5px 0;
+}
+
+.upload-label input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#uploadPreview {
+    width: auto;
+    height: 193px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#addImageIcon {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
