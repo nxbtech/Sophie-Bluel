@@ -192,76 +192,12 @@ footer nav ul {
 }
 
 
-.login-form {
-	width: 379px;
-    background-color: #fff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    text-align: center;
-	margin: auto;
-	margin-top: 10%;
-	margin-bottom: 20%;
-}
-
-.login-form h2 {
-    margin-bottom: 20px;
-    color: #2f4f4f; /* Couleur du texte */
-}
-
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #2f4f4f;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.input-group button {
-	display: flex;
-	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
-    width: 50%;
-    padding: 10px;
-    background-color: #1d5039; /* Couleur du bouton */
-    border: none;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.input-group button:hover {
-    background-color: #2d584d; /* Couleur au survol du bouton */
-}
-
-.forgot-password {
-    margin-top: 10px;
-}
-
-.forgot-password a {
-    color: #2f4f4f;
-    text-decoration: none;
-}
-
-.forgot-password a:hover {
-    text-decoration: underline;
-}
 
 .header-container {
-    display: flex; /* Utilise flexbox pour aligner horizontalement */
-    align-items: center; /* Aligne verticalement le h2 et le bouton */
-    justify-content: center; /* Espace entre les éléments */
-    margin-bottom: 20px; /* Ajuste l'espacement en bas */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 20px; 
 }
 
 #openModal {
@@ -408,6 +344,8 @@ footer nav ul {
     flex-wrap: wrap;  /* Permet le retour à la ligne des éléments */
     gap: 10px;  /* Espacement entre les éléments */
     margin-bottom: 30px;
+    width: 100%;  /* Assurez-vous que le conteneur prend toute la largeur disponible */
+    text-align: center;  /* Assure que le texte est centré si besoin */
 }
 
 /* Styles pour les boutons de catégorie */
@@ -519,7 +457,9 @@ footer nav ul {
 
 .input-group label {
     display: block;
-    margin-bottom: 5px;
+    height: 51px;
+    margin-bottom: -25px;
+    text-align: left;
 }
 
 .input-group input,
@@ -536,11 +476,12 @@ footer nav ul {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    width: 100%; /* Prend toute la largeur disponible */
+    width: 237px; /* Prend toute la largeur disponible */
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    margin: auto;
 }
 
 .submit-button:hover {
@@ -601,3 +542,25 @@ footer nav ul {
     display: block;
 }
 
+/* Styles pour la bannière de mode édition */
+.edit-mode-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    margin: 0;  /* Supprime les marges */
+    box-sizing: border-box;  /* Assure que le padding est inclus dans la largeur totale */
+}
+
+.edit-mode-banner .edit-mode-icon {
+    margin-right: 10px;
+    height: 20px;
+}

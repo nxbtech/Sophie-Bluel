@@ -298,3 +298,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const authToken = localStorage.getItem('authToken');
+    const editModeBanner = document.getElementById('edit-mode-banner');
+
+    if (authToken && editModeBanner) {
+        editModeBanner.style.display = 'flex';  // Affiche la bannière si l'utilisateur est connecté
+    } else if (editModeBanner) {
+        editModeBanner.style.display = 'none';  // Cache la bannière si l'utilisateur n'est pas connecté
+    }
+});
