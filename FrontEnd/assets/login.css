@@ -50,7 +50,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    max-height: 100vh;
     font-family: 'Work Sans';
     font-size: 14px;
     background-color: #faf5f0;
@@ -63,7 +63,7 @@ header {
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
-    margin-top: -500px;
+    margin-top: -10px;
 }
 
 h1 {

@@ -564,3 +564,26 @@ footer nav ul {
     margin-right: 10px;
     height: 20px;
 }
+
+/* Styles pour les boutons de catégorie */
+#categories .category-button {
+    background-color: transparent;
+    border: 1px solid #005f47; 
+    padding: 10px 20px;
+    color: #005f47;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 5px; /* Ajoute un espace autour de chaque bouton */
+}
+
+#categories .category-button:hover {
+    background-color: #005f47;
+    color: white;
+}
+
+#categories .category-button.active {
+    background-color: green;  /* Vert pour le bouton actif */
+    color: white;  /* Texte blanc pour le bouton actif */
+}

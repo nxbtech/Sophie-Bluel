@@ -4,126 +4,115 @@
     <meta charset="UTF-8">
     <title>Sophie Bluel - Architecte d'intérieur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
-    <meta name="description" content="">
     <link rel="stylesheet" href="./assets/style.css">
-    <script src="login.js" defer></script>
-    <script src="script.js" defer></script>
 </head>
 <body>
     <div id="edit-mode-banner" class="edit-mode-banner">
-        <img src="./assets/icons/modifier.png" alt="Modifier Icon" class="edit-mode-icon">
+        <img src="./assets/icons/edit-mode.png" alt="Modifier Icon" class="edit-mode-icon">
         <span>Mode édition</span>
     </div>
-<header>
-    <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-    <nav>
-        <ul>
-            <li>projets</li>
-            <li>contact</li>
-            <li id="authAction"><a href="login.html">login</a></li>
-            <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <section id="introduction">
-        <figure>
-            <img src="./assets/images/sophie-bluel.png" alt="">
-        </figure>
-        <article>
-            <h2>Designer d'espace</h2>
-            <p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-            <p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-            <p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
-        </article>
-    </section>
-    <section id="portfolio">
-        <div class="header-container">
-            <h2>Mes Projets</h2>
-            <button id="openModal" class="custom-button">
-                <span><img src="assets/icons/modifier.png" alt="Modifier icon" class="button-icon"></span>
-                modifier
-            </button>
-        </div>
+    <header>
+        <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+        <nav>
+            <ul>
+                <li>projets</li>
+                <li>contact</li>
+                <li id="authAction"><a href="login.html">login</a></li>
+                <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="introduction">
+            <figure>
+                <img src="./assets/images/sophie-bluel.png" alt="">
+            </figure>
+            <article>
+                <h2>Designer d'espace</h2>
+                <p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+                <p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+                <p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+            </article>
+        </section>
+        <section id="portfolio">
+            <div class="header-container">
+                <h2>Mes Projets</h2>
+                <button id="openModal" class="custom-button">
+                    <span><img src="assets/icons/modifier.png" alt="Modifier icon" class="button-icon"></span>
+                    modifier
+                </button>
+            </div>
 
-<!-- Modale de la galerie -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Galerie photo</h2>
-        <div id="modal-gallery-content" class="gallery">
-            <!-- Les images seront ajoutées dynamiquement ici -->
-        </div>
-        <hr>
-        <button id="addPhoto" class="add-photo-btn">Ajouter une photo</button>
-    </div>
-</div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Galerie photo</h2>
+                    <div id="modal-gallery-content" class="gallery"></div>
+                    <hr>
+                    <button id="addPhoto" class="add-photo-btn">Ajouter une photo</button>
+                </div>
+            </div>
 
-<!-- Modale pour ajouter une photo -->
-<div id="addPhotoModal" class="modal add-photo-modal">
-    <div class="modal-content add-photo-modal-content">
-        <span class="close add-photo-close">&times;</span>
-        <h2>Ajout photo</h2>
-        <form id="addPhotoForm" class="add-photo-form">
-            <div class="photo-upload">
-                <label for="photoFile" class="upload-label">
-                    <input type="file" id="photoFile" accept="image/png, image/jpeg" style="display: none;">
-                    <div class="upload-button" id="uploadButton">
-                        <img src="../FrontEnd/assets/icons/add-image.png" alt="add-img" id="uploadPreview"/>
-                        <div class="upload-info">
-                            <div class="upload-info-text">+ Ajouter photo</div>
-                            <div class="upload-info-details">jpg, png : 4mo max</div>
+            <div id="addPhotoModal" class="modal add-photo-modal">
+                <div class="modal-content add-photo-modal-content">
+                    <span class="close add-photo-close">&times;</span>
+                    <h2>Ajout photo</h2>
+                    <form id="addPhotoForm" class="add-photo-form">
+                        <div class="photo-upload">
+                            <label for="photoFile" class="upload-label">
+                                <input type="file" id="photoFile" accept="image/png, image/jpeg" style="display: none;">
+                                <div class="upload-button" id="uploadButton">
+                                    <img src="../FrontEnd/assets/icons/add-image.png" alt="add-img" id="uploadPreview"/>
+                                    <div class="upload-info">
+                                        <div class="upload-info-text">+ Ajouter photo</div>
+                                        <div class="upload-info-details">jpg, png : 4mo max</div>
+                                    </div>
+                                </div>
+                            </label>
                         </div>
-                    </div>
-                </label>
+                        <div class="input-group">
+                            <label for="photoTitle">Titre</label>
+                            <input type="text" id="photoTitle" placeholder="Titre" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="photoCategory">Catégorie</label>
+                            <select id="photoCategory" required></select>
+                        </div>
+                        <div class="input-group">
+                            <button type="submit" class="submit-button">Valider</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="photoTitle">Titre</label>
-                <input type="text" id="photoTitle" placeholder="Titre" required>
-            </div>
-            <div class="input-group">
-                <label for="photoCategory">Catégorie</label>
-                <select id="photoCategory" required>
-                    <!-- Options dynamiques ajoutées via JavaScript -->
-                </select>
-            </div>
-            <div class="input-group">
-                <button type="submit" class="submit-button">Valider</button>
-            </div>
-        </form>
-    </div>
-</div>
 
-<div id="categories">
-
-</div>
-        <div id="gallery" class="gallery">
-            <!-- Les éléments de la galerie seront ajoutés dynamiquement ici -->
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Vous avez un projet ? Discutons-en !</p>
-        <form action="#" method="post">
-            <label for="name">Nom</label>
-            <input type="text" name="name" id="name">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-            <input type="submit" value="Envoyer">
-        </form>
-    </section>
-</main>
-<footer>
-    <nav>
-        <ul>
-            <li>Mentions Légales</li>
-        </ul>
-    </nav>
-</footer>
+            <div id="categories"></div>
+            <div id="gallery" class="gallery"></div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Vous avez un projet ? Discutons-en !</p>
+            <form action="#" method="post">
+                <label for="name">Nom</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li>Mentions Légales</li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="scripts/auth.js" defer></script>
+    <script src="scripts/dom.js" defer></script>
+    <script src="scripts/modals.js" defer></script>
+    <script src="scripts/project.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>
