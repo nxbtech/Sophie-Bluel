@@ -73,7 +73,7 @@ function initModals() {
             formData.append('image', photoFile);
 
             try {
-                const response = await fetch('http://localhost:5678/api/works', {
+                const response = await fetch(`${CONFIG.API_BASE_URL}/works`, {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('authToken')}`
@@ -102,7 +102,7 @@ function initModals() {
 
 async function loadProjectsInModal() {
     try {
-        const response = await fetch('http://localhost:5678/api/works');
+        const response = await fetch(`${CONFIG.API_BASE_URL}/works`);
         if (!response.ok) throw new Error('Erreur dans la récupération des projets');
 
         const projects = await response.json();
@@ -156,7 +156,7 @@ function checkFormCompletion() {
 async function handleDeleteProject(projectId) {
     const authToken = localStorage.getItem('authToken');
     try {
-        const response = await fetch(`http://localhost:5678/api/works/${projectId}`, {
+        const response = await fetch(`${CONFIG.API_BASE_URL}/works/${projectId}`, {
             method: 'DELETE',
             headers: { 'Authorization': `Bearer ${authToken}` }
         });
@@ -175,3 +175,16 @@ function removeProjectFromDOM(projectId) {
     const gallery = document.querySelector(`#gallery figure[data-project-id="${projectId}"]`);
     if (gallery) gallery.remove();
 }
+
+function hideTitlesInModal() {
+    const modalGallery = document.querySelector('.modal .gallery');
+    const titles = modalGallery.querySelectorAll('figcaption');
+    titles.forEach(title => {
+        title.style.display = 'none';
+    });
+}
+
+// Appeler cette fonction lorsque le modal est ouvert
+document.getElementById('openModal').addEventListener('click', () => {
+    hideTitlesInModal();
+});

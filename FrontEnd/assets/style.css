@@ -587,3 +587,7 @@ footer nav ul {
     background-color: green;  /* Vert pour le bouton actif */
     color: white;  /* Texte blanc pour le bouton actif */
 }
+
+.modal .gallery figcaption {
+    display: none;
+}

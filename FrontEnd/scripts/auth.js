@@ -53,7 +53,7 @@ async function handleLogin(event) {
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('http://localhost:5678/api/users/login', {
+        const response = await fetch(`${CONFIG.API_BASE_URL}/users/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -61,13 +61,15 @@ async function handleLogin(event) {
             body: JSON.stringify({ email, password })
         });
 
+        const messageContainer = document.getElementById('message-container');
+
         if (!response.ok) {
             if (response.status === 401) {
-                alert('Non autorisé : vérifiez vos informations d\'identification.');
+                messageContainer.innerHTML = '<p class="error-message">Vérifiez vos informations d\'identification.</p>';
             } else if (response.status === 404) {
-                alert('Utilisateur non trouvé.');
+                messageContainer.innerHTML = '<p class="error-message">Utilisateur non trouvé.</p>';
             } else {
-                alert('Une erreur est survenue. Veuillez réessayer.');
+                messageContainer.innerHTML = '<p class="error-message">Une erreur est survenue. Veuillez réessayer.</p>';
             }
             return;
         }

@@ -16,7 +16,7 @@ async function initProjects() {
 
 async function fetchCategories() {
     try {
-        const response = await fetch('http://localhost:5678/api/categories');
+        const response = await fetch(`${CONFIG.API_BASE_URL}/categories`);
         if (!response.ok) throw new Error('Erreur dans la récupération des catégories');
         return await response.json();
     } catch (error) {
@@ -88,7 +88,7 @@ function setActiveCategoryButton(activeButton) {
 
 async function fetchProjects() {
     try {
-        const response = await fetch('http://localhost:5678/api/works');
+        const response = await fetch(`${CONFIG.API_BASE_URL}/works`);
         if (!response.ok) throw new Error('Erreur dans la récupération des projets');
         return await response.json();
     } catch (error) {
@@ -124,7 +124,7 @@ function addProjectToGallery(project) {
 async function handleDeleteProject(projectId) {
     const authToken = localStorage.getItem('authToken');
     try {
-        const response = await fetch(`http://localhost:5678/api/works/${projectId}`, {
+        const response = await fetch(`${CONFIG.API_BASE_URL}/works/${projectId}`, {
             method: 'DELETE',
             headers: { 'Authorization': `Bearer ${authToken}` }
         });
